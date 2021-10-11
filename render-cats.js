@@ -20,6 +20,11 @@ export function renderCats(cats) {
     catsPersonality.classList.add('personality');
     catsPersonality.textContent = 'Personality: ' + cats.personality;
 
-    catsCard.append(catsHeader, img, catsColor, catsAge, catsPersonality);
+    const button = document.createElement('button');
+    button.value = cats.id;
+    button.classList.add('add-button');
+    button.textContent = 'Add';
+
+    catsCard.append(catsHeader, img, catsColor, catsAge, catsPersonality, button);
     return catsCard;
 }
