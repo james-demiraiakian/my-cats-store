@@ -6,7 +6,7 @@ export const cats = [
         color: 'Calico',
         personality: 'Mean',
         price: 7250000,
-        img: './assets/ducky.JPG'
+        img: './assets/eowyn.JPG'
     },
     {
         id: '02',
@@ -15,7 +15,7 @@ export const cats = [
         color: 'Orange Tabby',
         personality: 'Loud',
         price: 0.43,
-        img: './assets/eowyn.jpg'
+        img: './assets/ducky.jpg'
     },
     {
         id: '03',

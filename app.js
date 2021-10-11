@@ -1,8 +1,9 @@
-// import functions and grab DOM elements
+import { cats } from "./cats.js";
+import { renderCats } from "./render-cats.js";
 
-// initialize global state
+const catsList = document.getElementById('cats-list');
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+for (let cat of cats){
+    const catsCard = renderCats(cat);
+    catsList.append(catsCard);
+}
