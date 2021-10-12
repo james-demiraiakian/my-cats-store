@@ -9,8 +9,9 @@ export function findByID(id, items) {
 export function calculateOrderTotal(cart, cats) {
     let orderTotal = 0;
     for (let cat of cart) {
-        const cats = findByID(cat.id, cats);
-        orderTotal = orderTotal + cats.price * cat.qty
+        const ca = findByID(cat.id, cats);
+        orderTotal = orderTotal + ca.price * cat.qty
+        console.log(orderTotal + ' ' + ca.price + ' ' + cat.qty);
     }
     return orderTotal;
 }
