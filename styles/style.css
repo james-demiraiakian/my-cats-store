@@ -1,22 +1,28 @@
 * {
-    --color1: #715AFF;
+    --color1: #9999A1;
     --color2: #102e4a;
-    --color3: #77ACA2;
+    --color3: #e6e6e9;
 }
 
 body {
     background-color: var(--color1);
 }
 
+header {
+    background-image: url('../assets/paw-prints.png');
+}
+
 h1 {
     font-size: 3rem;
     text-align: center;
+    font-family: 'Caveat Brush', cursive;
 }
 
 #cats-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
+    position: relative;
 }
 
 .cats-card {
@@ -29,6 +35,7 @@ h1 {
     margin-left: 110px;
     padding-bottom: 40px;
     width: 400px;
+    height: 624px;
     background-color: var(--color3);
 }
 
@@ -47,9 +54,13 @@ img {
     height: 300px;
 }
 
-.color, .age, .personality {
+.color, .age, .personality, .price {
     font-size: 1.2rem;
     line-height: 2rem;
+}
+
+.color, .age, .personality, .add-button {
+    font-family: 'Caveat Brush', cursive;
 }
 
 .add-button {

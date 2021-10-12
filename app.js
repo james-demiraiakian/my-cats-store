@@ -6,4 +6,6 @@ const catsList = document.getElementById('cats-list');
 for (let cat of cats){
     const catsCard = renderCats(cat);
     catsList.append(catsCard);
+
+    //event listener will go here
 }
