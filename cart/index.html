@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/cart.css">
     <title>Cats Cart</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Cart</h1>
+        <p>Review your order</p>
+    </header>
+    <main>
+        <div class="container">
+            <table>
+                <thead>
+                    <th>Cat</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>Ducky</td>
+                        <td>3</td>
+                        <td>$0.43</td>
+                        <td>$1.29</td>
+                    </tr>
+                    <tr>
+                        <td>Froderick</td>
+                        <td>2</td>
+                        <td>$100,000,000</td>
+                        <td>$200,000,000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td></td>
+                    <td></td>
+                    <td>Order Total</td>
+                    <td id="order-total">$200,000,001.29</td>
+                </tfoot>
+            </table>
+        </div>
+        <button id="place-order">Place Order</button>
+    </main>
 </body>
 </html>
