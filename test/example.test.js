@@ -8,7 +8,7 @@ const test = QUnit.test;
 test('renderCats should output some HTML', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '<div class="cats-card"><h2>Eowyn</h2><img src="./assets/eowyn.JPG"><div class="color">Color: Calico</div><div class="age">Age: 7</div><div class="personality">Personality: Mean</div><div class="price">$7,250,000</div><button value="01" class="add-button">Add</button></div>';
+    const expected = '<div class="cats-card"><h2>Eowyn</h2><img src="./assets/eowyn.jpg"><div class="color">Color: Calico</div><div class="age">Age: 7</div><div class="personality">Personality: Mean</div><div class="price">$7,250,000</div><button value="01" class="add-button">Add</button></div>';
     const eowyn = cats[0];
     
     //Act 
