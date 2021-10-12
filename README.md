@@ -49,9 +49,10 @@ index.html
 ACP
 
 3
-new file in ./date/cart.js
+new file in ./data/cart.js
     array of object for items in cart (test)
     export
+    
 ACP
 
 4
