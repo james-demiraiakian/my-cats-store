@@ -4,7 +4,6 @@ import { renderLineItem } from './render-line-item.js';
 
 const tbody = document.getElementById('table-body');
 const cart = getCart();
-
 for (let cartCats of cart) {
     const catsData = findByID(cartCats.id, cats);
 
@@ -16,7 +15,7 @@ const catTotal = calculateOrderTotal(cart, cats);
 const orderTotal = document.getElementById('order-total');
 orderTotal.textContent = toUSD(catTotal);
 
-const orderButt = document.getElementById('order-button');
+const orderButt = document.getElementById('place-order');
 orderButt.addEventListener('click', () => {
     localStorage.removeItem('CART');
     window.location.replace('..');
