@@ -23,3 +23,68 @@
 * Cypress will open -- you should then click "run <#> integration spec(s)"
     ![](cypress.png)
 * Make sure all tests pass
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PLANS day 2 (Lab-07)
+
+new branch
+
+1
+make new folder ./cart
+    index.html
+    cart-data.js // holds temp checkout data
+    render-cart.js
+
+2
+index.html
+    build table for formating
+        header - header stuff 
+        body - quant, prod name, price, total
+        footer - order total
+    add 'place order' button
+    make cart.css
+        style table
+
+ACP
+
+3
+new file in ./data/cart.js
+    array of object for items in cart (test)
+    export
+    
+ACP
+
+4
+export function findByID in /utils.js
+    takes array, id. 
+    returns first item that has .id === id
+    no match return null (optional)
+    may need expect.deepEqual for test
+
+ACP
+
+5
+DOM render function
+    ./cart/render-cart.js
+    export function to gen table rows
+    use html as guide
+    create each dom element
+    update test
+
+ACP
+
+6
+gen shopping cart
+    import data, DOM render, util function
+    locate <tbody> element
+    loop through cart
+
+ACP
+
+7
+calcOrderTotal in utils.js
+    variable for order total
+    loop and calc each line
+    return total
+    add total to table
