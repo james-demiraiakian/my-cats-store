@@ -15,4 +15,6 @@ for (let cartCats of cart) {
 const catTotal = calculateOrderTotal(cart, cats);
 const orderTotal = document.getElementById('order-total');
 orderTotal.textContent = toUSD(catTotal);
-console.log(catTotal);
+
+const ca = findByID('01', cats);
+console.log(ca);
