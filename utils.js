@@ -37,3 +37,6 @@ export function addCat(id) {
     const stringCat = JSON.stringify(cart);
     localStorage.setItem('CART', stringCat);
 }
+
+const a = getCart();
+console.log(a);

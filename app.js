@@ -1,5 +1,6 @@
 import { cats } from './cats.js';
 import { renderCats } from './render-cats.js';
+import { addCat } from './utils.js';
 
 const catsList = document.getElementById('cats-list');
 
