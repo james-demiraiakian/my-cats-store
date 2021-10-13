@@ -18,4 +18,4 @@ export function renderLineItem(cartCats, catsData) {
     tr.append(tdName, tdQuant, tdPrice, tdTotal);
 
     return tr;
-};
+}

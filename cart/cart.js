@@ -1,6 +1,6 @@
-import { cart } from "../data/cart-data.js";
-import { calculateOrderTotal, findByID, toUSD } from "../utils.js";
-import { cats } from "../cats.js";
+import { cart } from '../data/cart-data.js';
+import { calculateOrderTotal, findByID, toUSD } from '../utils.js';
+import { cats } from '../cats.js';
 import { renderLineItem } from './render-line-item.js';
 
 const tbody = document.getElementById('table-body');
@@ -10,7 +10,7 @@ for (let cartCats of cart) {
 
     const tr = renderLineItem(cartCats, catsData);
     tbody.appendChild(tr);
-};
+}
 
 const catTotal = calculateOrderTotal(cart, cats);
 const orderTotal = document.getElementById('order-total');

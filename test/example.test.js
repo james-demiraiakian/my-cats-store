@@ -2,6 +2,8 @@
 // import { example } from '../example.js';
 import { cats } from '../cats.js';
 import { renderCats } from '../render-cats.js';
+import { cart } from '../cart/cart-data.js';
+import { calculateOrderTotal } from '../utils.js';
 
 const test = QUnit.test;
 
@@ -17,5 +19,13 @@ test('renderCats should output some HTML', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('calculate order total functions as intended', (expect) => {
+    const expected = '2247350002.15';
+
+    const actual = calculateOrderTotal(cart, cats);
+
     expect.equal(actual, expected);
 });
