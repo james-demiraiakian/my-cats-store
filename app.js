@@ -9,3 +9,11 @@ for (let cat of cats){
 
     //event listener will go here
 }
+
+const addButton = document.querySelectorAll('.add-button');
+for (let button of addButton) {
+    button.addEventListener('click', ()=> {
+        addCat(button.id);
+        alert('Added a Cat to your cart');
+    });
+}
