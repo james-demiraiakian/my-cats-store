@@ -32,6 +32,6 @@ export function renderCats(cats) {
     button.classList.add('add-button');
     button.textContent = 'Add';
 
-    catsCard.append(catsHeader, img, catsColor, catsAge, catsPersonality, price, qty, button);
+    catsCard.append(catsHeader, img, catsColor, catsAge, catsPersonality, price, button);
     return catsCard;
 }
