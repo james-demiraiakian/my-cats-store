@@ -24,11 +24,14 @@ export function renderCats(cats) {
     price.classList.add('price');
     price.textContent = '$' + cats.price.toLocaleString();
 
+    // let qty = document.createElement('div');
+    // qty.value = cats.id;
+
     const button = document.createElement('button');
     button.value = cats.id;
     button.classList.add('add-button');
     button.textContent = 'Add';
 
-    catsCard.append(catsHeader, img, catsColor, catsAge, catsPersonality, price, button);
+    catsCard.append(catsHeader, img, catsColor, catsAge, catsPersonality, price, qty, button);
     return catsCard;
 }

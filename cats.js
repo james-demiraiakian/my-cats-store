@@ -32,7 +32,7 @@ export const cats = [
         age: '1',
         color: 'Tortoise Shell',
         personality: 'Wide Eyed Shock, Perfect',
-        price: 416000000,
+        price: 41600000,
         img: './assets/meena.JPG'
     },
     {

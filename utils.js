@@ -38,5 +38,6 @@ export function addCat(id) {
     localStorage.setItem('CART', stringCat);
 }
 
-const a = getCart();
-console.log(a);
+export function clearCart() {
+    localStorage.removeItem('CART');
+}

@@ -1,4 +1,4 @@
-import { calculateOrderTotal, findByID, toUSD, getCart } from '../utils.js';
+import { calculateOrderTotal, findByID, toUSD, getCart, clearCart } from '../utils.js';
 import { cats } from '../cats.js';
 import { renderLineItem } from './render-line-item.js';
 
@@ -17,6 +17,6 @@ orderTotal.textContent = toUSD(catTotal);
 
 const orderButt = document.getElementById('place-order');
 orderButt.addEventListener('click', () => {
-    localStorage.removeItem('CART');
+    clearCart();
     window.location.replace('..');
 });

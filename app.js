@@ -7,15 +7,20 @@ const catsList = document.getElementById('cats-list');
 for (let cat of cats){
     const catsCard = renderCats(cat);
     catsList.append(catsCard);
-
-    //event listener will go here
 }
 
 const addButton = document.querySelectorAll('.add-button');
+// let qtyDiv = document.getElementsByClassName('qty-div');
 for (let button of addButton) {
     button.addEventListener('click', ()=> {
         addCat(button.value);
-        alert('Added a Cat to your cart');
+        //alert('Added a Cat to your cart');
+        // const cart = getCart();
+        // let cartQuant = cart[0][1];
+        // qtyDiv.textContent = cartQuant;
+        // console.log(cart);
+        // console.log(cartQuant);
+        // console.log(qtyDiv.textContent);
     });
 }
 
