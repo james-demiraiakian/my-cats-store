@@ -18,6 +18,10 @@ footer {
     background-image: url('../assets/paw-prints.png');
     background-size: contain;
     background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
 }
 
 h1 {
@@ -85,5 +89,12 @@ img {
     margin: 5px;
     background-color: var(--color1);
     width: 80px;
+    border-radius: 5px;
+}
+
+#checkout {
+    margin: 5px;
+    background-color: var(--color3);
+    width: 100px;
     border-radius: 5px;
 }

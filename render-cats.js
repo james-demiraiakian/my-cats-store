@@ -24,6 +24,9 @@ export function renderCats(cats) {
     price.classList.add('price');
     price.textContent = '$' + cats.price.toLocaleString();
 
+    // let qty = document.createElement('div');
+    // qty.value = cats.id;
+
     const button = document.createElement('button');
     button.value = cats.id;
     button.classList.add('add-button');

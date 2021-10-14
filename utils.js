@@ -18,3 +18,26 @@ export function calculateOrderTotal(cart, cats) {
 export function toUSD(number){
     return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 }
+
+export function getCart() {
+    const catString = localStorage.getItem('CART') || '[]';
+    const cart = JSON.parse(catString);
+    return cart;
+}
+
+export function addCat(id) {
+    const cart = getCart();
+    const cartCat = findByID(id, cart);
+    if (cartCat) {
+        cartCat.qty++;
+    } else {
+        const newCat = { id: id, qty: 1 };
+        cart.push(newCat);
+    }
+    const stringCat = JSON.stringify(cart);
+    localStorage.setItem('CART', stringCat);
+}
+
+export function clearCart() {
+    localStorage.removeItem('CART');
+}
