@@ -42,18 +42,18 @@ export function clearCart() {
     localStorage.removeItem('CART');
 }
 
-import { cats } from '../cats.js';
+import { cats } from './cats.js';
 
 export function getCat() {
     let localCats = localStorage.getItem('CATS');
     const catsStored = JSON.parse(localCats);
-
+    
     if (!catsStored) {
         const catsString = JSON.stringify(cats);
         localStorage.setItem('CATS', catsString);
     }
 
-    return localCats || cats;
+    return catsStored || cats;
 }
 
 export function addCatToStore(newCat) {
@@ -63,4 +63,11 @@ export function addCatToStore(newCat) {
 
     let catsString = JSON.stringify(currentCats);
     localStorage.setItem('CATS', catsString);
+}
+
+export function clearNewCats() {
+    localStorage.removeItem('CATS');
+
+    const catsSeed = JSON.stringify(cats);
+    localStorage.setItem('CATS', catsSeed);
 }
