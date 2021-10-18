@@ -14,7 +14,7 @@ export const cats = [
         age: '11',
         color: 'Orange Tabby',
         personality: 'Loud',
-        price: 0.43,
+        price: 7000000,
         img: './assets/ducky.JPG'
     },
     {
@@ -37,7 +37,7 @@ export const cats = [
     },
     {
         id: '05',
-        name: 'Stray Cat',
+        name: 'Spike',
         age: '???',
         color: 'Grey Tabby',
         personality: 'Stray',
@@ -46,7 +46,7 @@ export const cats = [
     },
     {
         id: '06',
-        name: 'Also Stray Cat',
+        name: 'Slink',
         age: '???',
         color: 'Tortoise Shell',
         personality: 'Stray',
