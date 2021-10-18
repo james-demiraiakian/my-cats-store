@@ -41,3 +41,26 @@ export function addCat(id) {
 export function clearCart() {
     localStorage.removeItem('CART');
 }
+
+import { cats } from '../cats.js';
+
+export function getCat() {
+    let localCats = localStorage.getItem('CATS');
+    const catsStored = JSON.parse(localCats);
+
+    if (!catsStored) {
+        const catsString = JSON.stringify(cats);
+        localStorage.setItem('CATS', catsString);
+    }
+
+    return localCats || cats;
+}
+
+export function addCatToStore(newCat) {
+    let currentCats = getCat();
+
+    currentCats.push(newCat);
+
+    let catsString = JSON.stringify(currentCats);
+    localStorage.setItem('CATS', catsString);
+}
