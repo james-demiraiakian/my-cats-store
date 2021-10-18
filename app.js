@@ -5,9 +5,7 @@ import { addCat, getCat } from './utils.js';
 const catsList = document.getElementById('cats-list');
 
 const cats = getCat();
-// console.log('array' + cats);
 for (let cat of cats){
-    // console.log('object' + cat);
     const catsCard = renderCats(cat);
     catsList.append(catsCard);
 }
