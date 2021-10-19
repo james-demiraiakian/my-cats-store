@@ -1,9 +1,10 @@
-import { cats } from './cats.js';
+//import { cats } from './cats.js';
 import { renderCats } from './render-cats.js';
-import { addCat } from './utils.js';
+import { addCat, getCat } from './utils.js';
 
 const catsList = document.getElementById('cats-list');
 
+const cats = getCat();
 for (let cat of cats){
     const catsCard = renderCats(cat);
     catsList.append(catsCard);
