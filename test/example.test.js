@@ -3,7 +3,7 @@
 import { cats } from '../cats.js';
 import { renderCats } from '../render-cats.js';
 import { cart } from '../data/cart-data.js';
-import { findByID, calculateOrderTotal, getCart, addCat, getCat } from '../utils.js';
+import { findByID, calculateOrderTotal, getCart, addCat, getCat, clearCart } from '../utils.js';
 import { renderLineItem } from '../cart/render-line-item.js';
 
 const test = QUnit.test;
@@ -71,30 +71,22 @@ test('getCart() does a thing', (expect) => {
 });
 
 test('addCat() does a thing', (expect) => {
-    const testCart = getCart();
-    console.log(testCart);
-    const testCart2 = JSON.parse(testCart);
+    clearCart();
+    addCat('01');
 
-    const expected = {
-        'id': '01',
-        'name': 'Eowyn',
-        'age': '7',
-        'color': 'Calico',
-        'personality': 'Mean',
-        'price': 7250000,
-        'img': './assets/eowyn.jpg'
-    };
+    const expected = [{
+        'id':'01',
+        'qty':1
+    }];
 
-    const actual = testCart2;
-    // console.log(actual);
+    const actual = getCart();
     expect.deepEqual(actual, expected);
 });
 
 test('clearCart() does a thing', (expect) => {
-    const testCart = [2, 3, 4, 5, 6];
-    localStorage.setItem('CART', testCart);
+    clearCart();
 
-    const expected = [2, 3, 4, 5, 6];
+    const expected = [];
 
     const actual = getCart();
 
@@ -103,4 +95,4 @@ test('clearCart() does a thing', (expect) => {
 
 test('addCatToStore adds a cat', (expect) => {
 
-})
+});
