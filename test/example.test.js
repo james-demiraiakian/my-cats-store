@@ -3,7 +3,7 @@
 import { cats } from '../cats.js';
 import { renderCats } from '../render-cats.js';
 import { cart } from '../data/cart-data.js';
-import { findByID, calculateOrderTotal, getCart, addCat, getCat, clearCart } from '../utils.js';
+import { findByID, calculateOrderTotal, getCart, addCat, getCat, clearCart, addCatToStore } from '../utils.js';
 import { renderLineItem } from '../cart/render-line-item.js';
 
 const test = QUnit.test;
@@ -94,5 +94,20 @@ test('clearCart() does a thing', (expect) => {
 });
 
 test('addCatToStore adds a cat', (expect) => {
+    const expected = 7;
 
+    const newCat = {
+        id: '07',
+        name: 'Slink',
+        age: '???',
+        color: 'Tortoise Shell',
+        personality: 'Stray',
+        price: 5400000,
+        img: ''
+    };
+    addCatToStore(newCat);
+
+    const actual = getCat();
+
+    expect.deepEqual(actual.length, expected);
 });
