@@ -6,7 +6,6 @@ const tbody = document.getElementById('table-body');
 const cart = getCart();
 for (let cartCats of cart) {
     const catsData = findByID(cartCats.id, cats);
-
     const tr = renderLineItem(cartCats, catsData);
     tbody.appendChild(tr);
 }
