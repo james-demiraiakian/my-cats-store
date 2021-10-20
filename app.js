@@ -12,7 +12,9 @@ for (let cat of cats){
 
 const addButton = document.querySelectorAll('.add-button');
 // let qtyDiv = document.getElementsByClassName('qty-div');
+// console.log(addButton[0]);
 for (let button of addButton) {
+    // console.log(typeof button.value);
     button.addEventListener('click', ()=> {
         addCat(button.value);
         //alert('Added a Cat to your cart');
